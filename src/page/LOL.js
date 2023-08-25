@@ -38,7 +38,7 @@ const LOL = () => {
     }
 
     const api4 = async ()=>{
-      const url4 = new URL(`http://ddragon.leagueoflegends.com/cdn/13.16.1/data/en_US/summoner.json`)
+      const url4 = new URL(`https://ddragon.leagueoflegends.com/cdn/13.16.1/data/en_US/summoner.json`)
       const response4 = await fetch(url4)
       const data4 = await response4.json()
       return data4
