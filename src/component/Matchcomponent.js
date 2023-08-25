@@ -84,7 +84,7 @@ const Matchcomponent = () => {
               <div className="champion-info">
                 <div className="splash">
                   <img
-                    src={`http://ddragon.leagueoflegends.com/cdn/13.16.1/img/champion/${
+                    src={`https://ddragon.leagueoflegends.com/cdn/13.16.1/img/champion/${
                       나찾는함수(item)?.챔피언
                     }.png`}
                     width={48}
@@ -96,13 +96,13 @@ const Matchcomponent = () => {
                 </div>
                 <div className="spell">
                   <img
-                    src={`http://ddragon.leagueoflegends.com/cdn/13.16.1/img/spell/${스펠변환(
+                    src={`https://ddragon.leagueoflegends.com/cdn/13.16.1/img/spell/${스펠변환(
                       나찾는함수(item)?.스펠[0]
                     )}.png`}
                     width={22}
                   />
                   <img
-                    src={`http://ddragon.leagueoflegends.com/cdn/13.16.1/img/spell/${스펠변환(
+                    src={`https://ddragon.leagueoflegends.com/cdn/13.16.1/img/spell/${스펠변환(
                       나찾는함수(item)?.스펠[1]
                     )}.png`}
                     width={22}
@@ -153,7 +153,7 @@ const Matchcomponent = () => {
                   <img
                     src={
                       it !== 0
-                        ? `http://ddragon.leagueoflegends.com/cdn/13.16.1/img/item/${it}.png`
+                        ? `https://ddragon.leagueoflegends.com/cdn/13.16.1/img/item/${it}.png`
                         : "../images/null.png"
                     }
                     width={22}
@@ -166,7 +166,7 @@ const Matchcomponent = () => {
                 {울팀찾는함수(item).map((its) => (
                   <div>
                     <img
-                      src={`http://ddragon.leagueoflegends.com/cdn/13.16.1/img/champion/${its.챔피언}.png`}
+                      src={`https://ddragon.leagueoflegends.com/cdn/13.16.1/img/champion/${its.챔피언}.png`}
                     />
                     <span>{닉네임긴거좀잘라라(its.닉네임)}</span>
                   </div>
@@ -176,7 +176,7 @@ const Matchcomponent = () => {
                 {상대팀찾는함수(item).map((its) => (
                   <div>
                     <img
-                      src={`http://ddragon.leagueoflegends.com/cdn/13.16.1/img/champion/${its.챔피언}.png`}
+                      src={`https://ddragon.leagueoflegends.com/cdn/13.16.1/img/champion/${its.챔피언}.png`}
                     />
                     <span>{닉네임긴거좀잘라라(its.닉네임)}</span>
                   </div>
