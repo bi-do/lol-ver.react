@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { Container} from "react-bootstrap";
 import { useDispatch, useSelector } from "react-redux";
-import { search,search2 } from "../redux/reducer/lolSlice";
+import { search,search2, 매치아이디비우기 } from "../redux/reducer/lolSlice";
 import { useNavigate } from "react-router";
 
 
@@ -55,7 +55,7 @@ const LOL = () => {
   
 
   useEffect(()=>{
-   
+   disfatch(매치아이디비우기())
   },[])
   return (
     <div className="lol-main">

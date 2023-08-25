@@ -1,14 +1,13 @@
 import React from "react";
 import { Col, Container, Row } from "react-bootstrap";
-import { useDispatch } from "react-redux";
+
 import { useNavigate } from "react-router";
-import { 매치아이디비우기 } from "../redux/reducer/lolSlice";
+
 
 const Nav2 = () => {
   const navigate = useNavigate()
-  const disfatch = useDispatch()
+
   const gotohome = ()=>{
-    disfatch(매치아이디비우기())
     navigate('/')
   }
   return (

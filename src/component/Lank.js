@@ -3,14 +3,14 @@ import { useSelector } from "react-redux";
 
 const Lank = () => {
   const info = useSelector((state) => state.lol.소환사정보);
-  const 소환사정보 = info.filter((item) => item.queueType !== "CHERRY");
+  const 소환사정보 = info.filter((item) => item.queueType !== "CHERRY" && item.queueType !=='RANKED_TFT_DOUBLE_UP');
   
   return (
     <div>
       {소환사정보.map((item) => (
         <div className="lank">
           <div className="lank-mode">
-            {item.queueType === "RANKED_FLEX_SR" ? "자유랭크" : "솔로랭크"}
+            {item.queueType === "RANKED_FLEX_SR" ? "자유랭크" : '솔로랭크'}
           </div>
           <div className="lank-info">
             <div className="lank-img">

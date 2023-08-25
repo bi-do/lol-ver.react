@@ -6,29 +6,37 @@ import Match from "../component/Match";
 import { useDispatch } from "react-redux";
 import { useEffect } from "react";
 import { 매치아이디넣기 } from "../redux/reducer/lolSlice";
+import { useNavigate } from "react-router";
 const Loldetail = () => {
+
+  const navigate = useNavigate()
   const 소환사기본정보 = useSelector((state) => state.lol.소환사기본정보);
   const 매치아이디 = useSelector((state) => state.lol.매치아이디);
-  const disfatch = useDispatch();
+  const dispatch = useDispatch();
   const apikey = process.env.REACT_APP_lol_apikey;
   const 매치정보 = useSelector((state) => state.lol.매치정보);
+  const 전체정보 = useSelector((state)=>state.lol.전체정보)
 
-  const 매치정보넣기 = () => {
-    매치아이디.map(async (item) => {
+  const 매치정보넣기 = async () => {
+    const 프로미스들 = 매치아이디.map(async (item) => {
       const url4 = new URL(
         `https://asia.api.riotgames.com/lol/match/v5/matches/${item}?api_key=${apikey}`
       );
       const response4 = await fetch(url4);
       const data4 = await response4.json();
-      disfatch(매치아이디넣기(data4.info));
+     return data4.info
     });
+    const 매치변환 = await Promise.all(프로미스들)
+
+    dispatch(매치아이디넣기(매치변환))
   };
   useEffect(() => {
-    if (매치정보.length === 0) {
+    if (매치정보.length=== 0) {
       매치정보넣기();
-    } else {
-      console.log(매치정보);
-    }
+    } 
+    console.log(매치정보)
+    
+  
   }, [매치정보]);
   return (
     <div className="lol-detail">
