@@ -4,18 +4,30 @@ import Piechart from "./Piechart";
 import { useDispatch, useSelector } from "react-redux";
 import { useEffect } from "react";
 import {
-  전체승패가져오기,
+  매치아이디변경,
   전체정보가져오기,
-  내대전정보걸러내기,
+  큐타입변경,
 } from "../redux/reducer/lolSlice";
 import Graph from "./Graph";
+import { Button } from "react-bootstrap";
 
 const Match = () => {
+  const apikey = process.env.REACT_APP_lol_apikey;
   const 매치정보 = useSelector((state) => state.lol.매치정보);
   const 전체정보 = useSelector((state) => state.lol.전체정보);
   const 내id = useSelector((state) => state.lol.소환사기본정보.puuid);
-  const 내대전정보 = useSelector((state) => state.lol.내대전정보);
   const dispatch = useDispatch();
+  const 소환사주문 = useSelector((state) => state.lol.소환사주문);
+  const 스펠 = Object.values(소환사주문.data);
+  const 큐타입 = useSelector((state) => state.lol.큐타입);
+
+  const 스펠변환 = (its) => {
+    const 스펠찾았다 = 스펠.find((it) => {
+      return it.key == its;
+    });
+    return 스펠찾았다?.id;
+  };
+
   const timefilter = (item) => {
     const seconds = 1;
 
@@ -35,10 +47,6 @@ const Match = () => {
 
     endtime = Math.floor(endtime / 1000);
 
-    let duraitionmin = Math.floor(item.gameDuration / 60);
-
-    let duraitionsec = Math.floor(item.gameDuration % 60);
-
     let timedifference = today - endtime;
 
     if (timedifference < seconds) {
@@ -56,9 +64,9 @@ const Match = () => {
     }
   };
   const 번역 = (item) => {
-    return 한국어[큐타입[item]];
+    return 한국어[대전타입[item]];
   };
-  const 큐타입 = {
+  const 대전타입 = {
     400: "norm", //Normal Draft Pick
     420: "solo",
     430: "norm",
@@ -103,14 +111,19 @@ const Match = () => {
       몇일전: timefilter(item),
       게임모드: 번역(item.queueId),
       게임시간: item.gameDuration,
+      팀정보: item.teams,
       인원: [
         item.participants.map((it) => ({
           라인: it.teamPosition,
           닉네임: it.summonerName,
           챔피언: it.championName,
           챔피언레벨: it.champLevel,
+          소환사레벨: it.summonerLevel,
+          팀번호: it.teamId,
           푸아이디: it.puuid,
-          본인인증: it.puuid === 내id ? '나야' : "",
+          딜량: it.totalDamageDealtToChampions,
+          받은피해량: it.totalDamageTaken,
+          본인인증: it.puuid === 내id ? "나야" : "",
           킬: it.kills,
           데스: it.deaths,
           어시: it.assists,
@@ -126,38 +139,64 @@ const Match = () => {
           cs: it.totalMinionsKilled,
           게임시간: it.timePlayed,
           승리여부: it.win == true ? "승리" : "패배",
-          스펠: [it.summoner1Id, it.summoner2Id],
+          스펠: [스펠변환(it.summoner1Id), 스펠변환(it.summoner2Id)],
           와드: it.visionWardsBoughtInGame,
+          와드설치: it.wardsPlaced,
+          와드제거: it.wardsKilled,
         })),
       ],
     }));
-   await dispatch(전체정보가져오기(정보변환))
+    await dispatch(전체정보가져오기(정보변환));
+  };
+
+  const 큐타입버튼 = (item) => {
+    console.log("버튼누르는중");
+    dispatch(큐타입변경(item));
   };
 
   useEffect(() => {
     정보변환프로세스(매치정보);
-    console.log(매치정보)
   }, [매치정보]);
+
+  useEffect(() => {
+
+    if (큐타입 !== null) {
+      try{
+      const api3 = async (data) => {
+        const url3 = new URL(
+          `https://asia.api.riotgames.com/lol/match/v5/matches/by-puuid/${data}/ids?queue=${큐타입}&start=0&count=15&api_key=${apikey}`
+        );
+        const response3 = await fetch(url3);
+        const data3 = await response3.json();
+        dispatch(매치아이디변경(data3));
+      };
+      api3(내id);
+    }catch (error){
+      console.log('너무많은 api요청')
+    }
+    }
+  }, [큐타입]);
 
   return (
     <div>
       <div className="rate-info">
         <div className="q-area">
-          <button>전체</button>
-          <button>솔로랭크</button>
-          <button>자유랭크</button>
-          <button>큐 타입</button>
+          <button onClick={() => 큐타입버튼("")}>전체</button>
+          <button onClick={() => 큐타입버튼(420)}>솔로랭크</button>
+          <button onClick={() => 큐타입버튼(440)}>자유랭크</button>
+          <button onClick={() => 큐타입버튼(1700)}>아레나</button>
+          {/* <button>큐 타입</button> */}
         </div>
         <div className="rate-box">
           <div>
-           <Piechart 전체정보={전체정보} />
+            <Piechart 전체정보={전체정보} />
           </div>
           <div>
             <div className="rate-category">플레이한 챔피언 (최근 15게임)</div>
             <div>여긴짜증남구현안함</div>
           </div>
           <div>
-           <Graph/>
+            <Graph />
           </div>
         </div>
       </div>

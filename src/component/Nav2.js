@@ -18,13 +18,10 @@ const Nav2 = () => {
             <Col lg={9} className="fk-shit">
               <ul className="nav2-ul">
                 <li onClick={gotohome}>홈</li>
-                <li>챔피언 분석</li>
-                <li>아레나</li>
-                <li>멀티서치</li>
                 <div></div>
               </ul>
             </Col>
-            <Col lg={3}>패치보기</Col>
+            <Col lg={3}>패치보기(미구현)</Col>
           </Row>
         </Container>
       </div>

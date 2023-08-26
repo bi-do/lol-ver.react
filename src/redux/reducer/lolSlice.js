@@ -22,6 +22,8 @@ const lolslice = createSlice({
       서폿:0,
       정글:0,
     },
+    드롭다운뷰 : [],
+    큐타입:null,
   },
   reducers: {
     search: (state, action) => {
@@ -42,6 +44,7 @@ const lolslice = createSlice({
       state.소환사정보 = [];
       state.소환사기본정보 = [];
       state.승리횟수 = 0;
+      state.큐타입 = null
     },
     전체정보가져오기: (state, action) => {
       state.전체정보 = action.payload;
@@ -90,6 +93,16 @@ const lolslice = createSlice({
       state.kda.탑 = 탑
       
     },
+    드롭다운전환 : (state,action)=>{
+      const 인덱스 = action.payload
+      state.드롭다운뷰[인덱스] = !state.드롭다운뷰[인덱스]
+    },
+    큐타입변경: (state,action)=>{
+      state.큐타입 = action.payload
+    },
+    매치아이디변경:(state,action)=>{
+      state.매치아이디 = action.payload
+    }
   },
 });
 
@@ -103,4 +116,7 @@ export const {
   전체정보가져오기,
   전체승패가져오기,
   내대전정보걸러내기,
+  드롭다운전환,
+  큐타입변경,
+  매치아이디변경
 } = lolslice.actions;

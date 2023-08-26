@@ -68,14 +68,6 @@ const Piechart = () => {
     />
   );
 
-  useEffect(() => {
-    if (승리횟수 === 0) {
-      내대전정보 && console.log(전체정보);
-    }
-    내대전정보 && console.log(승리횟수);
-    console.log(kda);
-    console.log("전체정보", 전체정보);
-  }, [승리횟수]);
   return (
     <div className="차트">
       <div>

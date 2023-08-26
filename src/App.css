@@ -1,29 +1,29 @@
-body{
+body {
   margin: 0;
 }
-.nav1{
+.nav1 {
   display: flex;
   justify-content: space-between;
 
   height: 40px;
   font-size: 12px;
-  background-color: #28344E;
+  background-color: #28344e;
   color: white;
 }
 
-.nav-games{
+.nav-games {
   display: flex;
-  justify-content:flex-start;
-  padding:0;
-  height:100%;
+  justify-content: flex-start;
+  padding: 0;
+  height: 100%;
   align-items: center;
 }
 
-.logo{
+.logo {
   width: 98px;
-  background: #5383E8;
+  background: #5383e8;
 }
-.nav-games li{
+.nav-games li {
   list-style-type: none;
   height: 100%;
   display: flex;
@@ -32,58 +32,57 @@ body{
   padding: 0px 10px;
 }
 
-.nav-language{
+.nav-language {
   border: none;
-  background-color:#28344E;
+  background-color: #28344e;
   color: white;
 }
 
-.nav-loginbox{
-height: 100%;
-display: flex;
-align-items: center;
+.nav-loginbox {
+  height: 100%;
+  display: flex;
+  align-items: center;
 }
 
-.loginbutton{
-  
+.loginbutton {
   margin: 0px 15px;
-  border: 1px solid #5383E8;
-  background-color: #5383E8;
+  border: 1px solid #5383e8;
+  background-color: #5383e8;
   color: white;
   border-radius: 10%;
   padding: 2px 10px;
   cursor: pointer;
 }
 
-.loginbutton:hover{
+.loginbutton:hover {
   transform: scale(1.08);
   transition: 0.3s;
-  background-color:#3c5a99;
+  background-color: #3c5a99;
   border-color: #3c5a99;
 }
 
-.container li{
+.container li {
   list-style-type: none;
 }
 
-.nav2-ul{
+.nav2-ul {
   display: flex;
 }
 
-.nav2{
+.nav2 {
   display: flex;
   min-height: 49px;
-  background-color: #5383E8;
+  background-color: #5383e8;
   color: white;
 }
 
-.nav2-row{
+.nav2-row {
   height: 100%;
   display: flex;
   align-items: center;
 }
 
-.fk-shit{
+.fk-shit {
   height: 100%;
 }
 
@@ -94,14 +93,13 @@ align-items: center;
   padding-left: 0;
 }
 
-.nav2-ul li{
+.nav2-ul li {
   margin-right: 20px;
   cursor: pointer;
- 
 }
 
-.nav3{
-  background-color: #FFB900;
+.nav3 {
+  background-color: #ffb900;
   color: black;
   height: 40px;
   display: flex;
@@ -109,51 +107,51 @@ align-items: center;
   font-size: 14px;
 }
 
-.move-line{
+.move-line {
   height: 2px;
   background-color: white;
 }
 
-.lol-main{
-  background-color: #5383E8;
+.lol-main {
+  background-color: #5383e8;
   min-height: 84vh;
 }
 
-.main-box{
+.main-box {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  padding: 100px
+  padding: 100px;
 }
 
-.input-box{
-margin-top: 50px;
-border: 1px solid white;
-width: 600px;
-height: 60px;
-border-radius: 50px;
-background-color: white;
-padding: 0 25px;
-display: flex;
-justify-content: space-between;
-font-size: 12px;
-font-weight: 900;
-align-items: center;
+.input-box {
+  margin-top: 50px;
+  border: 1px solid white;
+  width: 600px;
+  height: 60px;
+  border-radius: 50px;
+  background-color: white;
+  padding: 0 25px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  font-weight: 900;
+  align-items: center;
 }
 
-.input-box input{
+.input-box input {
   border: none;
   width: 200%;
   font-size: 16px;
 }
 
-.input-box input:focus{
+.input-box input:focus {
   border: none;
   outline: none;
 }
 
-.ggbutton{
+.ggbutton {
   width: 42px;
   background-size: 42px;
   background-repeat: no-repeat;
@@ -164,36 +162,34 @@ align-items: center;
   height: 80%;
 }
 
-
-.footer{
+.footer {
   background-color: black;
   color: white;
   font-size: 13px;
   text-align: center;
-
 }
 
-.lol-detail{
+.lol-detail {
   color: black;
 }
 
-.userinfo{
+.userinfo {
   display: flex;
   padding: 20px 0px;
 }
 
-.userinfo img{
+.userinfo img {
   width: 100px;
   border-radius: 20px;
 }
 
-.user-profile{
+.user-profile {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.level{
+.level {
   font-size: 12px;
   border: 1px solid black;
   border-radius: 20px;
@@ -206,72 +202,72 @@ align-items: center;
   font-weight: 900;
 }
 
-.user-text{
+.user-text {
   margin-left: 20px;
 }
 
-.user-text h3{
+.user-text h3 {
   font-weight: 900;
   margin: 10px 0px;
 }
 
-.tier-list{
+.tier-list {
   font-size: 11px;
   padding: 0px 3px;
-  border: 1px solid #ebeef1 ;
+  border: 1px solid #ebeef1;
 
-  color: #9AA4AF;
+  color: #9aa4af;
   background-color: #ebeef1;
 }
 
-.bottom{
+.bottom {
   background-color: #ebeef1;
   padding-top: 10px;
 }
 
-.lank{
+.lank {
   border: 1px solid white;
   border-radius: 10px;
   background-color: white;
   margin-bottom: 10px;
-  padding:10px;
+  padding: 10px;
   padding-bottom: 0px;
 }
 
-.lank-mode{
+.lank-mode {
   font-size: 14px;
   border-bottom: 1px solid #ebeef1;
   padding-bottom: 5px;
 }
 
-.lank-info{
+.lank-info {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
-.lank-img{
+.lank-img {
   display: flex;
   align-items: center;
 }
 
-.tier{
+.tier {
   font-size: 18px;
   font-weight: 900;
   padding-left: 10px;
 }
 
-.lp{
+.lp {
   font-size: 12px;
   padding-left: 10px;
 }
 
-.lank-rate{
+.lank-rate {
   font-size: 12px;
-  color: #9AA4AF;
+  color: #9aa4af;
 }
 
-.rate-info{
+.rate-info {
   border: 1px solid white;
   background-color: white;
   border-radius: 10px;
@@ -280,29 +276,37 @@ align-items: center;
   padding-bottom: 0;
 }
 
-.rate-info button{
+.rate-info button {
   border: none;
   background-color: white;
   margin-right: 10px;
 }
 
-.q-area{
+.q-area {
   border-bottom: 1px solid #ebeef1;
   padding-bottom: 5px;
+
 }
 
-.rate-box{
+.q-area button{
+  border-radius: 5px;
+}
+.q-area button:hover{
+  background-color: #ebeef1;
+}
+
+.rate-box {
   display: flex;
   justify-content: space-between;
   padding: 5px;
 }
 
-.rate-category{
+.rate-category {
   font-size: 12px;
   color: #758592;
 }
 
-.match-box{
+.match-box {
   display: flex;
   background-color: white;
   padding: 5px;
@@ -312,49 +316,48 @@ align-items: center;
   margin-bottom: 5px;
 }
 
-.match-box ul{
- padding-left: 15px;
+.match-box ul {
+  padding-left: 15px;
 }
 
-.match-box li{
+.match-box li {
   list-style-type: none;
-   margin-left: 0;
-   font-size: 12px;
+  margin-left: 0;
+  font-size: 12px;
 }
 
-.match-first{
+.match-first {
   width: 20%;
 }
 
-.champion-info{
+.champion-info {
   display: flex;
   position: relative;
 }
 
-.kda-all{
+.kda-all {
   width: 30%;
 }
 
-.kda{
+.kda {
   font-size: 15px;
   font-weight: 900;
   width: 100%;
 }
 
-.kda-rate{
+.kda-rate {
   font-size: 12px;
   color: #758592;
- 
 }
 
-.match-mode{
+.match-mode {
   display: flex;
-  flex-direction:column;
-  justify-content:space-around;
+  flex-direction: column;
+  justify-content: space-around;
   height: 100%;
 }
 
-.color-default{
+.color-default {
   width: 5px;
   height: 100%;
   position: absolute;
@@ -364,33 +367,30 @@ align-items: center;
   border-bottom-left-radius: 10px;
 }
 
-
-
-.colorlose{
-  background-color: #E84057;
-  color: #E84057;
+.colorlose {
+  background-color: #e84057;
+  color: #e84057;
 }
-.colorwin{
-  background-color: #5383E8
+.colorwin {
+  background-color: #5383e8;
 }
 
-.font-win{
-color: #5383E8;
-font-weight: 900;
+.font-win {
+  color: #5383e8;
+  font-weight: 900;
 }
 
-.font-lose{
-color: #E84057;
-font-weight: 900;
+.font-lose {
+  color: #e84057;
+  font-weight: 900;
 }
 
-.font-winlose{
+.font-winlose {
   font-weight: 900;
   color: gray;
 }
 
-
-.champion-box{
+.champion-box {
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
@@ -398,35 +398,35 @@ font-weight: 900;
   width: 40%;
 }
 
-.champion-info{
+.champion-info {
   height: 70px;
   display: flex;
   align-items: center;
 }
 
-.spell{
-   margin-left: 3px;
-   display: flex;
-   flex-direction: column;
-   justify-content: space-between;
-   margin-right: 10px;
+.spell {
+  margin-left: 3px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-right: 10px;
 }
 
-.spell img{
+.spell img {
   border-radius: 5px;
   margin: 2px 0px;
 }
 
-.splash{
+.splash {
   position: relative;
   height: 48px;
 }
 
-.splashart{
+.splashart {
   border-radius: 24px;
 }
 
-.champion-lv{
+.champion-lv {
   position: absolute;
   right: 0;
   bottom: 0;
@@ -434,7 +434,7 @@ font-weight: 900;
   font-size: 11px;
   background-color: black;
   border-radius: 10px;
-  width:20px;
+  width: 20px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -442,13 +442,13 @@ font-weight: 900;
   height: 20px;
 }
 
-.team-box img{
+.team-box img {
   width: 16px;
   border-radius: 4px;
   margin-right: 3px;
 }
 
-.team-box{
+.team-box {
   color: #758592;
   font-size: 12px;
   display: flex;
@@ -457,7 +457,7 @@ font-weight: 900;
   margin-right: 10%;
 }
 
-.dropdown{
+.dropdown {
   border: none;
   background-color: #ffbaa3;
   position: absolute;
@@ -468,16 +468,14 @@ font-weight: 900;
   bottom: 0;
   border-end-end-radius: 10px;
   border-top-right-radius: 10px;
-
 }
 
-.color-win{
+.color-win {
   background-color: #ecf2ff;
 }
 
-.color-lose{
+.color-lose {
   background-color: #fff1f3;
-
 }
 
 .item-img img {
@@ -485,75 +483,273 @@ font-weight: 900;
   border-radius: 5px;
 }
 
-.champion-others{
-  border-left:1px solid #9AA4AF;
-
-  
+.champion-others {
+  border-left: 1px solid #9aa4af;
 }
 
-.champion-others li{
+.champion-others li {
   font-size: 11px;
   position: relative;
   right: 7px;
 }
 
-.킬관여{
+.킬관여 {
   color: red;
 }
 
-
-
-.pie-rate{
+.pie-rate {
   position: absolute;
   left: 50%;
   right: 50%;
   bottom: 50%;
   top: 50%;
-  transform: translate(-50%,-50%);
+  transform: translate(-50%, -50%);
   width: 40px;
   height: 20px;
   text-align: center;
   font-weight: 900;
-  color: #5383E8;
+  color: #5383e8;
 }
 
-.차트{
+.차트 {
   display: flex;
 }
 
-.차트-pie{
+.차트-pie {
   display: flex;
   height: 130px;
   align-items: center;
   justify-content: space-between;
 }
 
-.pie-chart{
+.pie-chart {
   height: 100%;
   width: 130px;
   position: relative;
 }
 
-.차트-kda{
+.차트-kda {
   font-size: 12px;
   color: #758592;
 }
 
-.차트-평점{
+.차트-평점 {
   font-size: 20px;
   font-weight: bold;
 }
 
-.차트-킬관여{
+.차트-킬관여 {
   color: red;
   font-size: 12px;
 }
 
-.그래프{
+.그래프 {
   width: 150px;
   height: 130px;
 }
 
-.팀박스고정용{
+.팀박스고정용 {
   width: 50%;
+}
+
+.드롭다운-내브바 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 12px;
+  color: #9aa4af;
+  padding: 5px;
+  background-color: white;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.우리팀드롭다운 {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+.드롭다운 {
+  display: flex;
+  justify-content: space-between;
+
+  padding: 3px;
+}
+
+.드롭다운-소환사정보 {
+  display: flex;
+  width: 23%;
+}
+.드롭다운-챔피언 {
+  position: relative;
+  height: 32px;
+  width: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.드롭다운-챔피언레벨 {
+  position: absolute;
+  font-size: 10px;
+  font-weight: bold;
+  color: white;
+  background-color: black;
+  border-radius: 7px;
+  width: 15px;
+  height: 15px;
+  text-align: center;
+  left: 0px;
+  bottom: 0px;
+}
+
+.드롭다운-챔피언 img {
+  border-radius: 16px;
+}
+
+.드롭다운-그래프 {
+  display: flex;
+  align-items: center;
+  font-size: 11px;
+  color: #758592;
+  width: 15%;
+  justify-content: center;
+}
+
+.드롭다운-기타지표 {
+  display: flex;
+  align-items: center;
+  font-size: 11px;
+  color: #758592;
+  text-align: center;
+  width: 15%;
+  justify-content: center;
+}
+
+.드롭다운-스펠 {
+  display: flex;
+  flex-direction: column;
+}
+
+.드롭다운-스펠 img {
+  margin: 1px 4px;
+  border-radius: 3px;
+}
+
+.드롭다운-닉네임 {
+  font-size: 12px;
+}
+
+.드롭다운-소환사레벨 {
+  font-size: 11px;
+  color: #9aa4af;
+}
+
+.드롭다운-kda {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 11px;
+  color: #758592;
+  text-align: center;
+  width: 15%;
+}
+
+.드롭다운-킬관여율 {
+  font-weight: 900;
+}
+
+.드롭다운-아이템 {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 168px;
+  justify-content: center;
+}
+
+.드롭다운-아이템 img {
+  margin-right: 2px;
+  border-radius: 4px;
+}
+
+.드롭다운-와드 {
+  width: 50%;
+}
+
+.드롭다운-cs {
+  width: 50%;
+}
+
+.드롭다운-딜량 {
+  width: 50%;
+  text-align: center;
+ 
+  margin-right: 7px;
+  .graph-bar{
+    background-color: #e84057;
+  }
+}
+
+.드롭다운-받은피해량 {
+  width: 50%;
+  text-align: center;
+
+  .graph-bar{
+    background-color: #9aa4af;
+  }
+}
+
+.드롭다운-나 {
+  background-color: #ffd8d9;
+}
+
+.graph-bar {
+  height: 100%
+}
+
+
+.백그라운드바 {
+  width: 100%;
+  background-color: white;
+  height: 6px;
+}
+
+.소환사정보-승리{
+  font-weight: bold;
+  color: #4171D6;
+}
+
+.소환사정보-패배{
+  font-weight: bold;
+  color:#D31A45
+}
+
+.드롭다운-승리{
+  background-color: #ecf2ff;
+}
+
+.드롭다운-패배{
+  background-color: #fff1f3;
+}
+
+.드롭다운-승리-나{
+  background-color: #D5E3FF;
+}
+
+.드롭다운-패배-나{
+  background-color: #ffd8d9;
+}
+
+.팀드롭다운-승리{
+  border-top: 1px solid#D5E3FF;
+}
+
+.팀드롭다운-패배{
+  border-top:  1px solid #ffd8d9;
+}
+
+.드롭다운-all{
+  margin-bottom: 7px;
 }

@@ -15,7 +15,8 @@ const Loldetail = () => {
   const dispatch = useDispatch();
   const apikey = process.env.REACT_APP_lol_apikey;
   const 매치정보 = useSelector((state) => state.lol.매치정보);
-  const 전체정보 = useSelector((state)=>state.lol.전체정보)
+  const 큐타입 = useSelector((state)=>state.lol.큐타입)
+
 
   const 매치정보넣기 = async () => {
     const 프로미스들 = 매치아이디.map(async (item) => {
@@ -31,26 +32,23 @@ const Loldetail = () => {
     dispatch(매치아이디넣기(매치변환))
   };
   useEffect(() => {
-    if (매치정보.length=== 0) {
+
       매치정보넣기();
-    } 
-    console.log(매치정보)
-    
-  
-  }, [매치정보]);
+  }, [매치아이디]);
+
   return (
     <div className="lol-detail">
       <Container>
         <div className="userinfo">
           <div className="user-profile">
             <img
-              src={`http://ddragon.leagueoflegends.com/cdn/13.16.1/img/profileicon/${소환사기본정보.profileIconId}.png`}
+              src={`http://ddragon.leagueoflegends.com/cdn/13.16.1/img/profileicon/${소환사기본정보 && 소환사기본정보.profileIconId}.png`}
             ></img>
-            <div className="level">{소환사기본정보.summonerLevel}</div>
+            <div className="level">{소환사기본정보 && 소환사기본정보.summonerLevel}</div>
           </div>
           <div className="user-text">
-            <div className="tier-list">s2023 s1 diamond4</div>
-            <h3>{소환사기본정보.name}</h3>
+            <div className="tier-list">S2023 S1 Challenger</div>
+            <h3>{소환사기본정보 && 소환사기본정보.name}</h3>
             <div>
               <Button variant="primary">전적갱신</Button>
             </div>
